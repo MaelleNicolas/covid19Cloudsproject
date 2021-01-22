@@ -1,0 +1,23 @@
+<table class="table table-bordered table-light">
+    <thead class="table-active">
+      <tr>
+        <th>Corona Virus Cases Distribution Worldwide  </th>
+      </tr>
+    </thead>
+
+</table>
+
+<div>
+  <div>
+    <div class="chart">
+      <canvas baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType" 
+        [options]="pieChartOptions"
+        [colors]="pieChartColors"
+        [legend]="pieChartLegend">
+      </canvas>
+    </div>
+  </div>
+</div>

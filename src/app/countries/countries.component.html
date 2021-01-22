@@ -1,0 +1,44 @@
+<table class="table table-bordered table-light">
+    <thead class="table-active">
+      <tr>
+        <th>Corana Virus Cases by Country</th>
+      </tr>
+    </thead>
+
+</table>
+
+
+<div class='mb-5' >
+<table class="table table-bordered table-light">
+<colgroup>
+    <col span="1" class="table-dark">
+    <col span="2" class="table-warning">
+    <col span="2" class="table-info">
+    <col span="2" class="table-danger">
+
+</colgroup>
+    <thead >
+        <tr>
+            <th class = "text-white text-up">Country</th>
+            <th>New Cases </th>
+            <th>Total Cases</th>
+            <th>New Recoveries</th>
+            <th>Total Recoveries</th>
+            <th>New Deaths</th>
+            <th>Total Deaths</th>
+            
+        </tr> 
+    </thead>
+    <tbody>
+        <tr *ngFor="let country of covidCountriesAll">
+        <td (click)="specificCountryData(country.Slug)" 
+         class="text-white text-left"> {{country.Country}} </td>
+        <td class="text-right"> {{country.NewConfirmed}} </td>
+        <td class="text-right"> {{country.TotalConfirmed}} </td> 
+        <td class="text-right"> {{country.NewRecovered}} </td>
+        <td class="text-right"> {{country.TotalRecovered}} </td> 
+        <td class="text-right"> {{country.NewDeaths}} </td>
+        <td class="text-right"> {{country.TotalDeaths}} </td>    
+        </tr>
+    </tbody>
+    

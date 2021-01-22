@@ -1,0 +1,88 @@
+<div class ="row mb-5">
+    <div class ="col-sm-6" >
+    <h3> {{user.displayName}} </h3> 
+    </div>
+    
+    <div class ="col-sm-6 text-right" > <button class='btn btn-danger' (click)="covid19Service.signOut()"> Sign out </button>
+     </div>
+
+
+
+</div>
+
+<div class="text-center">
+<div class="mb-5">
+<h1>
+<img  style="width: 5%"
+src="https://firebasestorage.googleapis.com/v0/b/covid19-2eb25.appspot.com/o/1023px-SARS-CoV-2_without_background.png?alt=media&token=54b381c3-a6f9-4e77-98b7-9b229347f687" 
+alt="Covid19 image" 
+/>
+ Covid19 
+<img  style="width: 5%"
+src="https://firebasestorage.googleapis.com/v0/b/covid19-2eb25.appspot.com/o/1023px-SARS-CoV-2_without_background.png?alt=media&token=54b381c3-a6f9-4e77-98b7-9b229347f687" 
+alt="Covid19 image" 
+/>
+ </h1>
+
+<p> Live Updates and Statistics </p>
+</div>
+
+</div>
+
+<table class="table table-bordered table-light">
+
+    <thead class="table-active">
+      <tr>
+        <th> Worlwide
+        <img  style="width: 10%"
+src="https://firebasestorage.googleapis.com/v0/b/covid19-2eb25.appspot.com/o/news.png?alt=media&token=d12d59e1-d438-4fe1-927a-a6b932906e23" 
+alt="news image" 
+/>
+        </th>
+      </tr>
+    </thead>
+
+</table>
+
+<div class="container" >
+<div class="col-md-12" *ngFor="let n of news">
+    <h1> {{n.title}}</h1>
+    <p>{{n.description}}</p>
+    <div>
+<span class="badge"> {{n.Date}} </span><div class="pull-right"><span class="label label-primary">By {{user.displayName}}</span> 
+    </div> 
+    <hr>        
+</div>
+</div>
+
+<app-summary></app-summary>
+<app-pie-chart></app-pie-chart>
+<app-bar-chart></app-bar-chart>
+<app-line-chart></app-line-chart>
+
+<app-countries></app-countries>
+
+<app-add-news></app-add-news>
+
+
+<table class="table table-bordered table-light">
+    <thead class="table-active text-center">
+      <tr>
+        <th> Data source : 
+         
+         <a href="https://covid19api.com">Covid19 Api / John Hopkins CSSE</a>
+          </th>
+
+           <th> Credits : 
+         
+         <a href="https://www.linkedin.com/in/maelle-nicolas-32b94b194?originalSubdomain=fr">Maelle NICOLAS </a>
+          </th>
+
+      </tr>
+    </thead>
+
+</table>
+
+
+
+

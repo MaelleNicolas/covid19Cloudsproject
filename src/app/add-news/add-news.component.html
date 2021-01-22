@@ -1,0 +1,68 @@
+<table class="table table-bordered table-light">
+    <thead class="table-active">
+      <tr>
+        <th colspan="2" scope="colgroup"> Add News ! </th>
+      </tr>
+    </thead>
+</table>
+
+<div class="mb-5">
+<form (ngSubmit)="addNews()" >
+<div class="row" mb-3> 
+    <div class="col-md-6">
+        <label for="dateInput"> Date</label>
+        <input type="date" id="dateInput" name="dateInput"
+        class="form-control"
+        [(ngModel)]="date"
+        required
+        />
+    </div>
+    
+</div>
+
+<div class="row" mb-3>
+    <div class="col-12">  
+        <label for=""> Title </label>
+        <input type ="text" id="titleInput"
+        name="titleInout"
+        class="form-control"
+        placeholder="Title"
+        [(ngModel)]="title"
+        required
+        />
+     </div>   
+</div>
+
+<div class="row" mb-3>
+    <div class="col-12">  
+        <label for=""> Description </label>
+        <input type ="text" id="descriptionInput"
+        name="descriptionInout"
+        class="form-control"
+        placeholder="What do you want to say about the world?"
+        [(ngModel)]="description"
+        required
+        />
+     </div>   
+</div>  
+
+<div class="row" mb-3>
+    <div class="col-12">  
+        <label for=""> Code </label>
+        <input type ="password" id="codeInput"
+        name="codeInout"
+        class="form-control"
+        placeholder="Write the good code to be edited"
+        [(ngModel)]="code"
+        required
+        />
+     </div>   
+</div>
+<button class="btn btn-primary" > SUBMIT  </button>
+
+</form>
+
+</div>
+
+
+

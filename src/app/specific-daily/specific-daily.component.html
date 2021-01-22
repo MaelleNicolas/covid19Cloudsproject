@@ -1,0 +1,49 @@
+<table class="table table-bordered table-light">
+    <thead class="table-active">
+      <tr>
+        <th> Daily Corona Virus Cases in {{slug}}</th>
+      </tr>
+    </thead>
+
+</table>
+
+<div>
+  <div>
+    <div style="display: block">
+      <canvas baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType">
+      </canvas>
+    </div>
+    
+  </div>
+</div>
+
+<table class="table table-bordered table-light">
+    <thead class="table-active">
+      <tr>
+        <th> Total Corona Virus Cases  in {{slug}}</th>
+      </tr>
+    </thead>
+
+</table>
+
+<div class="flex">
+  <div class="flex-item">
+    <div style="display: block;">
+    <canvas baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+  
+</div>
